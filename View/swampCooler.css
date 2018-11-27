@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+}
+
+#degrees {
+    font-size: 75px;
+}
+
+button {
+    margin-left: 2%;
+}
