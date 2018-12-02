@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <title>Swamp Cooler</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="swampCooler.css">
+    <link rel="stylesheet" href="View/Resources/bootstrap.min.css">
+    <link rel="stylesheet" href="View/swampCooler.css">
+    <link rel="stylesheet" href="View/buttonStyle.css">
 
   </head>
   <body>
-      <p id = "degrees"> 72 Degrees </p>
-      <button id = "on"> Fan Off </button>
-      <button id = "low"> Fan Low </button> 
-      <button id = "high"> Fan High </button>
-      <button id = "on"> Pump On </button>
+
+	<div class="container">
+
+	      <div class="jumbotron">
+	        <h1 class="display-3">
+	        	<p id="temperature_text"><span id = "current_temp">72</span>&deg</p>
+      			<p id="last_updated">Last Updated: <span id="timestamp">11/29/18 at 5:30pm</span></p>
+      		</h1>
+
+	      	<button class="bttn-material-flat bttn-md bttn-primary" id = "fan_off"> Fan Off </button>
+		    <button class="bttn-material-flat bttn-md"  id = "fan_low"> Fan Low </button> 
+		    <button class="bttn-material-flat bttn-md"  id = "fan_high"> Fan High </button>
+		    <br>
+		    <button class="bttn-material-flat bttn-md bttn-primary"  id = "pump_off"> Pump Off </button>
+ 		    <button class="bttn-material-flat bttn-md"  id = "pump_on"> Pump On </button>
+	      </div>
+
+	    </div>
+
+	    <script src="View/Resources/ie10-viewport-bug-workaround.js"></script>
+        <script src="View/Resources/jquery-3.3.1.min.js"></script>
+        <script src="View/Resources/socket.io.js"></script>
+        <script src="View/script.js"></script>
+
+
   </body>
 </html>

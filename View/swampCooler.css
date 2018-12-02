@@ -2,8 +2,16 @@ body {
     text-align: center;
 }
 
-#degrees {
-    font-size: 75px;
+#temperature_text {
+    font-size: 200px;
+    vertical-align: top;
+    color: #3d80ed;
+}
+
+
+#last_updated {
+	font-size: 14px;
+	color: #cecece;
 }
 
 button {
