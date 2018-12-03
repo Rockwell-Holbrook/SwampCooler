@@ -62,6 +62,43 @@
 
 
 
-      socket.on('synchronize client', function(pump_state, fan_state) {
-        console.log("Need to synchronize view to show state as: " + pump_state + ", " + fan_state);
+      socket.on('synchronize client', function(pump_state, fan_state, json_data) {
+      	if (pump_state == 1) {
+      		$("#pump_on").addClass("bttn-primary");
+			$("#pump_off").removeClass("bttn-primary");
+      	}
+      	else if (pump_state == 0) {
+      		$("#pump_off").addClass("bttn-primary");
+			$("#pump_on").removeClass("bttn-primary");
+      	}
+      	else {
+      		$("#pump_on").removeClass("bttn-primary");
+      		$("#pump_off").removeClass("bttn-primary");
+      	}
+
+
+      	if (fan_state == 0) {
+      		$("#fan_off").addClass("bttn-primary");
+			$("#fan_low").removeClass("bttn-primary");
+			$("#fan_high").removeClass("bttn-primary");
+      	}
+      	else if (fan_state == 1) {
+      		$("#fan_off").removeClass("bttn-primary");
+			$("#fan_low").addClass("bttn-primary");
+			$("#fan_high").removeClass("bttn-primary");
+      	}
+      	else if (fan_state == 2) {
+      		$("#fan_off").removeClass("bttn-primary");
+			$("#fan_low").removeClass("bttn-primary");
+			$("#fan_high").addClass("bttn-primary");
+      	}
+      	else {
+      		$("#fan_off").removeClass("bttn-primary");
+			$("#fan_low").removeClass("bttn-primary");
+			$("#fan_high").removeClass("bttn-primary");
+      	}
+
+      	//$("#current_temp").text = jsonData[0].temp;
+      	//$("#timestamp").text = jsonData[0].temp;
+
       });
